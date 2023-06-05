@@ -36,6 +36,7 @@ public class clase_5_actividad21 {
                fin = obtener_fin_secuencias(arr, inicio );
                int acum = acumular_cantidad_elementos_descendentes(arr, inicio, fin);
                int longitud = (fin-inicio +1);
+               
                if(acum==longitud &&longitud!=1){
                 eliminar_secuencia_descendente(arr, inicio, fin);
                }
