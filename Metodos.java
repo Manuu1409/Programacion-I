@@ -69,8 +69,6 @@ public static void corrimiento_izquierda(int[] arr, int pos) {
 
 
 
-
-
 public static int obtener_numero_usuario (int []arr) {
     BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
 
