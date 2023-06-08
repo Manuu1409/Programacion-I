@@ -29,7 +29,7 @@ public class clase_5_actividad13 {
         System.out.println("Arreglo aleatorio");
         imprimir_arreglo_int(arrenteros);
   
-        insercionDecreciente(arrenteros);
+        burbujeo(arrenteros);
         System.out.println("Arreglo con el insert desordenado");
         imprimir_arreglo_int(arrenteros);
 
@@ -43,17 +43,18 @@ public class clase_5_actividad13 {
         
     }
 
-    public static void insercionDecreciente(int arr[]){
-		for (int i = 1; i < MAX; i++) {
-			int aux = arr[i];
-			int j = i - 1;
-			while ((j >= 0) && (arr[j] < aux)){ // para hacerlo creciente nadamas cambio el signo en (arr[j] > aux) 
-				arr[j+1] = arr[j];
-				j--;
-			}
-			arr[j+1] = aux;
-		}
-	}
+    public static void burbujeo(int[] arr){
+        int temp;
+        for(int i = 1;i < MAX;i++){
+        for (int j = 0 ; j < MAX - 1; j++){
+        if (arr[j] < arr[j+1]){   //ahi esta decreciente , para hacerlo creciente se cambia el signo a >
+        temp = arr[j];
+        arr[j] = arr[j+1];
+        arr[j+1] = temp;
+        }
+        }
+        }
+        }
 
     public static void corrimiento_derecha(int [] arr){
         for (int i = MAX-1; i > 0; i--){
