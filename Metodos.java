@@ -54,21 +54,19 @@ public static void corrimiento_derecha(int [] arr){
     }
 }
 
-public static void corrimiento_derecha(int[] arr, int pos) {
-    int i = MAX - 1;
-    while (pos <= i) {
-        arr[i] = arr[i - 1];
-        i--;
+public static void corrimiento_derecha_pos (int [] arr, int pos) {
+    for (int i = MAX-1; pos <= i ;i--) {
+        arr[i] = arr[i-1];
     }
 }
-
 
 public static void corrimiento_izquierda(int[] arr, int pos) {
-    while (pos < MAX - 1) {
-        arr[pos] = arr[pos + 1];
-        pos++;
+    for (int i = pos; i < MAX - 1; i++) {
+        arr[i] = arr[i + 1];
+
     }
 }
+
 
 
 public static int obtener_numero_usuario (int []arr) {
