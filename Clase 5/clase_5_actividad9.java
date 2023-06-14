@@ -22,9 +22,9 @@ public class clase_5_actividad9 {
         System.out.println("Arreglo aleatorio");
         cargar_arreglo_aleatorio_int(arrenteros);
         imprimir_arreglo_int(arrenteros);
-
-        agregar_numero_pos_cero(arrenteros);
+        
         corrimiento_derecha(arrenteros);
+        agregar_numero_pos_cero(arrenteros);
         System.out.println("Arreglo cambiado por un numero que ingreso el usuario en la posicion 0");
         imprimir_arreglo_int(arrenteros);
     }

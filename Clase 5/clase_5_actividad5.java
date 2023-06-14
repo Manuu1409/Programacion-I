@@ -22,8 +22,8 @@ public class clase_5_actividad5 {
     }
 
     public static void invertirArr (char [] arr) {
-        char aux; 
-		for(int pos=0; pos<MAX/2; pos++){   
+        char aux;
+		for(int pos=0; pos<MAX/2; pos++){
 			aux = arr[pos];
 			arr[pos] = arr[MAX-1-pos];
 			arr[MAX-1-pos] = aux;

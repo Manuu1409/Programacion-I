@@ -4,7 +4,7 @@ Hacer un programa que inserte un elemento en un arreglo
 */
 
 //esta actividad la voy a comentar toda por si las dudas
-//Seguro esta mal, pero no lo quiero borrar 
+//Seguro esta mal, pero no lo quiero borrar
 
 import java.util.Random;
 
@@ -28,7 +28,7 @@ public class clase_5_actividad13 {
         insertarElemento(arrenteros);
         System.out.println("Arreglo aleatorio");
         imprimir_arreglo_int(arrenteros);
-  
+
         burbujeo(arrenteros);
         System.out.println("Arreglo con el insert desordenado");
         imprimir_arreglo_int(arrenteros);

@@ -1,17 +1,16 @@
 /*
-Hacer un programa que dado un arreglo de enteros de tamaño
-10 que se encuentra precargado, solicite al usuario un número
-entero y elimine la primera ocurrencia del número (un número
-igual) en el arreglo (si existe). Para ello tendrá que buscar la
-posición y si está, realizar un corrimiento a izquierda (queda una
-copia de la última posición del arreglo en la anteúltima posición).
+Suponer a partir de lo resuelto en el ejercicio anterior (11) que
+el elemento a eliminar coincide con el último que hay en el arreglo.
+¿Qué pasa en este caso? ¿Cómo daría una solución al problema?
 */
 
+
+    
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Random;
 
-public class clase_5_actividad10 {
+public class clase_5_actividad12 {
 
     public static final int MAX= 10;
     public static final int MAX_VALOR= 10;
@@ -21,25 +20,25 @@ public class clase_5_actividad10 {
 
         int arrenteros [] = new int [MAX];
 
-        //prefiero llamar los metodos en el main , asi queda mas clean el codigo :D
-        
         System.out.println("Arreglo aleatorio");
         cargar_arreglo_aleatorio_int(arrenteros);
         imprimir_arreglo_int(arrenteros);
 
         int num = obtener_numero_usuario();
-        eliminar_primer_ocurrencia(arrenteros, num);
-        System.out.println("Asi quedaria el arreglo eliminando la primer ocurrencia");
+        eliminar_todas_ocurrencias(arrenteros, num);
+         if (arrenteros[9] == num) {  //Solucion a mi modo
+            arrenteros[9] = 0;
+        }
+        System.out.println("Asi quedaria el arreglo eliminando todas las ocurrencias");
         imprimir_arreglo_int(arrenteros);
-        
     }
 
-    public static void eliminar_primer_ocurrencia (int [] arr, int numero)  {
-        
+    public static void eliminar_todas_ocurrencias (int [] arr, int numero)  {
+
+
         for(int pos = 0; pos < MAX; pos++) {
             if (numero == arr[pos]) {
-                corrimiento_izquierda(arr, pos);;
-                break; //break para cortar el if , se podria hacer otra cosa como un else :}
+                corr_izq_usuario(arr, pos);
             }
         }
     }
@@ -58,8 +57,8 @@ public class clase_5_actividad10 {
         return numero;
     }
 
-    public static void corrimiento_izquierda(int[] arr, int pos) {
-    for (int i = pos; i < MAX - 1; i++) {
+    public static void corr_izq_usuario(int [] arr, int pos){
+         for (int i = pos; i < MAX - 1; i++) {
         arr[i] = arr[i + 1];
 
     }

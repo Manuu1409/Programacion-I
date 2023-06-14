@@ -19,7 +19,7 @@ public static final double probabilidad_numero = 0.4;
 //Declarar arreglo aleoatorio
 
 int [] arrenteros = new int [MAX];
-
+    
 // arreglo ya hardcodeado
 int arrenteros [] = {5, 6 ,18 ,2 ,4 ,9 ,7 ,1 ,10, 0};
 

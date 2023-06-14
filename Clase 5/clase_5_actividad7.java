@@ -34,3 +34,81 @@ public class clase_5_actividad7 {
     }
     
 }
+
+//ESTE ES POR INGRESO DEL USUARIO Y UN METODO DE ORDENAMIENTO
+/*
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Random;
+
+public class clase_5_actividad7 {
+
+    public static final int MAX = 10;
+    public static final int MAX_VALOR = 10;
+    public static final int MIN_VALOR =1;
+    
+    public static void main(String[] args) {
+        
+        int arrenteros []= new int [MAX];
+
+        cargar_arreglo_aleatorio_int(arrenteros);
+        burbujeo(arrenteros);
+        imprimir_arreglo_int(arrenteros);
+        int num = obtener_numero_usuario(arrenteros);
+        corrimiento_derecha(arrenteros, num);
+        imprimir_arreglo_int(arrenteros);
+
+
+    }
+
+    public static void burbujeo (int []arr){
+        int tmp;
+        for(int i = 1; i < MAX; i++){
+            for(int j = 0; j < MAX-1; j++){
+                if (arr[j] > arr[j+1]){
+                tmp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = tmp;
+            }
+         }
+       }
+     }
+
+     public static void corrimiento_derecha(int []arr, int pos) {
+        for(int i = MAX-1 ;pos <= i; i--) {
+            arr[i] = arr[i-1];
+
+        }
+     }
+
+     public static int obtener_numero_usuario (int []arr) {
+    BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
+
+    int numero = 0;
+
+    try {
+
+        System.out.println("Ingrese una pos del arreglo para corrimiento derecha");
+        numero = Integer.valueOf(entrada.readLine());
+        
+    } catch (Exception exc) {
+        System.out.println(exc);
+    }
+
+    return numero;
+}
+
+    public static void imprimir_arreglo_int(int[] arr){
+        for (int pos = 0; pos < MAX; pos++){
+        System.out.println("arrenteros["+pos+"] -> "+arr[pos]);
+        }
+    }
+
+    public static void cargar_arreglo_aleatorio_int(int [] arr){
+        Random r = new Random();
+        for (int pos = 0; pos < MAX; pos++){
+        arr[pos]=(r.nextInt(MAX_VALOR-MIN_VALOR+1) + MIN_VALOR);
+        }
+    }
+}
+*/

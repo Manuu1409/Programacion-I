@@ -26,26 +26,29 @@ public class clase_5_actividad11 {
         cargar_arreglo_aleatorio_int(arrenteros);
         imprimir_arreglo_int(arrenteros);
 
-        int num = pedir_numero();
+        int num = obtener_numero_usuario();
         eliminar_todas_ocurrencias(arrenteros, num);
+         if (arrenteros[9] == num) {
+            arrenteros[9] = 0;
+        }
         System.out.println("Asi quedaria el arreglo eliminando todas las ocurrencias");
         imprimir_arreglo_int(arrenteros);
+
+        
 
     }
 
     public static void eliminar_todas_ocurrencias (int [] arr, int numero)  {
 
-        int pos = 0;
 
-        while (pos < MAX_VALOR) {
+        for(int pos = 0; pos < MAX; pos++) {
             if (numero == arr[pos]) {
                 corr_izq_usuario(arr, pos);
-            } 
-            pos++;
+            }
         }
     }
 
-    public static int pedir_numero() {
+    public static int obtener_numero_usuario() {
         BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
         int numero = 0;
 
@@ -60,12 +63,11 @@ public class clase_5_actividad11 {
     }
 
     public static void corr_izq_usuario(int [] arr, int pos){
-        //int i= pos;
-        while(pos<(MAX-1)){
-            arr[pos]=arr[pos+1];
-            pos++;
-        }
+         for (int i = pos; i < MAX - 1; i++) {
+        arr[i] = arr[i + 1];
+
     }
+}
 
     public static void imprimir_arreglo_int(int[] arr){
         for (int pos = 0; pos < MAX; pos++){
@@ -79,6 +81,4 @@ public class clase_5_actividad11 {
         arr[pos]=(r.nextInt(MAX_VALOR-MIN_VALOR+1) + MIN_VALOR);
         }
     }
- 
-
 }
