@@ -50,31 +50,33 @@ public class clase_6_actividad2 {
 
 
     public static void cargar_matriz_aleatorio_int (int [][] mat) {
-	    Random r = new Random();
-	        for (int fila = 0; fila < MAXFILA; fila++) {
-	            cargar_arreglo_aleatorio_int(mat[fila]);
-	        }
-	    }
+        Random r = new Random();
 
-	    public static void cargar_arreglo_aleatorio_int(int [] arr) {
-	        Random r = new Random();
-	        for (int pos = 0; pos < MAXCOLUMNA; pos++) {
-	            arr[pos] = (r.nextInt(MAXVALOR - MINVALOR + 1) + MINVALOR);
-	        }
-	    }
+        for (int fila = 0; fila < MAXFILA; fila++) {
+            cargar_arreglo_aleatorio_int(mat[fila]);
+        }
+    }
 
-	    public static void imprimir_matriz_int(int [][] mat) {
-	        for (int fila = 0; fila < MAXFILA; fila++) {
-	            imprimir_arreglo_int(mat[fila]);
-	        }
-	    }
+    public static void cargar_arreglo_aleatorio_int(int [] arr) {
+        Random r = new Random();
 
-	    public static void imprimir_arreglo_int(int [] arr) {
-	        for (int pos = 0; pos < MAXCOLUMNA; pos++) {
-	            System.out.print("[" + arr[pos] + "]");
-	        }
-	        System.out.println("");
-	    }
+        for (int pos = 0; pos < MAXCOLUMNA; pos++) {
+            arr[pos] = (r.nextInt(MAXVALOR - MINVALOR + 1) + MINVALOR);
+        }
+    }
+
+    public static void imprimir_matriz_int(int [][] mat) {
+        for (int fila = 0; fila < MAXFILA; fila++) {
+            imprimir_arreglo_int(mat[fila]);
+        }
+    }
+
+    public static void imprimir_arreglo_int(int [] arr) {
+        for (int pos = 0; pos < MAXCOLUMNA; pos++) {
+            System.out.print("[" + arr[pos] + "]");
+        }
+        System.out.println("");
+    }
 
     
 }

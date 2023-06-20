@@ -1,14 +1,17 @@
 /*
 Hacer un programa que dada una matriz de enteros de tamaño
-5*10 que se encuentra precargada, solicite al usuario una posición
-fila, columna y realice un corrimiento a izquierda.
+5*10 que se encuentra precargada, solicite al usuario un número
+entero y una posición fila, columna. Con estos datos tendrá que
+realizar un corrimiento a derecha (se pierde el último valor en
+dicha fila) y colocar el número en la matriz en la posición fila,
+columna indicada.
 */
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Random;
 
-public class clase_6_actividad3 {
+public class clase_6_actividad4 {
 
     public static final int MAXFILA = 5;
     public static final int MAXCOLUMNA = 10;
@@ -16,8 +19,8 @@ public class clase_6_actividad3 {
     public static final int MINVALOR = 1;
 
     public static void main(String[] args) {
-
-        int [][] matint = new int [MAXFILA][MAXCOLUMNA];
+        
+        int [][] matint = new int[MAXFILA][MAXCOLUMNA];
 
         System.out.println("Matriz Aleatoria");
         cargar_matriz_aleatorio_int(matint);
@@ -26,14 +29,12 @@ public class clase_6_actividad3 {
         int fila = obtener_numero_usuario_fila(matint);
         int columna = obtener_numero_usuario_columna(matint);
 
-        corrimiento_izquierda(matint[fila],columna);
-        System.out.println("Matriz con corrimiento izquierda");
+        corrimiento_derecha(matint[fila],columna);
+        System.out.println("Matriz con corrimiento derecha");
         imprimir_matriz_int(matint);
 
+
     }
-
-
-
     public static int obtener_numero_usuario_fila (int [][]mat) {
     BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
 
@@ -68,11 +69,10 @@ public class clase_6_actividad3 {
     return columna;
 }
 
-    public static void corrimiento_izquierda(int[] arr, int pos) {
-    for (int i = pos ; i  < MAXCOLUMNA - 1; i++) {
-        arr[i] = arr[i + 1];
+    public static void corrimiento_derecha (int [] arr, int pos) {
+    for (int i = MAXCOLUMNA-1; pos <= i ;i--) {
+        arr[i] = arr[i-1];
     }
-    
 }
 
     public static void cargar_matriz_aleatorio_int (int [][] mat) {
